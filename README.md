@@ -1,10 +1,6 @@
-[zuora](https://github.com/DeadAlready/node-zuora) is a wrapper that allows easy operations through the Zuora REST API.
+zuora is a wrapper that allows easy operations through the Zuora REST API.
 It uses the restify client to make requests and an internal validator to do basic validation beforehand.
 It also parses the errors coming from zuora to provide a readable format if possible.
-
-# Installation
-
-    $ npm install zuora
 
 # Usage
 
@@ -30,18 +26,18 @@ The following options are available:
 The zuora client will have the following objects
 
 + account - Wrapper for Account operations
-  + create (data, callback) - Creates a customer account.
-  + get (id, callback) - Retrieves basic information about a specified customer account.
-  + summary (id, callback) - Retrieves detailed information about the specified customer account.
-  + update (id, data, callback) - Updates the specified customer account.
+    + create (data, callback) - Creates a customer account.
+    + get (id, callback) - Retrieves basic information about a specified customer account.
+    + summary (id, callback) - Retrieves detailed information about the specified customer account.
+    + update (id, data, callback) - Updates the specified customer account.
 + catalog - Wrapper for Catalog operations
 	+ get ([opts], callback) - Retrieves the entire product catalog, including all products and their corresponding rate plans and charges.
 	+ query (params, callback) - Function for querying the product catalog.
 + payment - Wrapper for Payment operations
-  + create (data, callback) - Creates a new credit card payment method for the specified customer account
-  + get (id, [opts], callback) - Retrieves all credit card information for the specified customer account
-  + update (id, data, callback) - Updates an existing credit card payment method for the specified customer account.
-  + del (id, callback) - Deletes a credit card payment method from the specified customer account.
+    + create (data, callback) - Creates a new credit card payment method for the specified customer account
+    + get (id, [opts], callback) - Retrieves all credit card information for the specified customer account
+    + update (id, data, callback) - Updates an existing credit card payment method for the specified customer account.
+    + del (id, callback) - Deletes a credit card payment method from the specified customer account.
 + subscription - Wrapper for Subscription operations
 	+ preview (opts, callback) - Method for getting a subscription preview
 	+ create (opts, callback) - Method for creating a new subscription
@@ -54,6 +50,8 @@ The zuora client will have the following objects
 	+ getInvoices (id, [opts], callback) - Method for getting invoices of an account
 	+ getPayments (id, [opts], callback) - Method for getting payments of an account
 	+ collect (id, [opts], callback) - Generates invoices and collects payments for a specified account.
++ hmacSignature - Wrapper for HMACSignature operations
+	+ get(opts, callback) - Method to generate a new CORS signature
 
 The Zuora documentation and examples can be found at
 http://knowledgecenter.zuora.com/D_Zuora_APIs/REST_API/B_REST_API_reference
@@ -61,7 +59,7 @@ http://knowledgecenter.zuora.com/D_Zuora_APIs/REST_API/B_REST_API_reference
 ## License
 
 The MIT License (MIT)
-Copyright (c) 2013 Joyent, Inc., All rights reserved.
+Copyright (c) 2014 Message Systems, Inc., All rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
