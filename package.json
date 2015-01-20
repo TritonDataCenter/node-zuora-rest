@@ -1,25 +1,26 @@
 {
-    "author": "Karl Düüna",
-    "name": "zuora",
-    "description": "Zuora API wrapper for Node",
-    "version": "0.1.7",
-    "keywords": [
-        "zuora",
-        "rest"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git@github.com/DeadAlready/node-zuora.git"
-    },
-    "main": "index.js",
-    "dependencies": {
-        "restify":"*",
-        "validator": "2.0.0"
-    },
-    "devDependencies": {},
-    "optionalDependencies": {},
-    "engines": {
-        "node": ">=0.10.0"
-    },
-    "private": false
+  "author": "Karl Düüna",
+  "name": "zuora",
+  "description": "Zuora API wrapper for Node",
+  "version": "0.1.7",
+  "keywords": [
+    "zuora",
+    "rest"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/DeadAlready/node-zuora.git"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "2.4.1",
+    "request": "2.51.0",
+    "validator": "2.0.0"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "private": false
 }

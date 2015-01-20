@@ -6,6 +6,8 @@ var Payment = require('./lib/payment');
 var Account = require('./lib/account');
 var Transaction = require('./lib/transaction');
 var Subscription = require('./lib/subscription');
+var HMACSignature = require('./lib/hmac-signature');
+var Usage = require('./lib/usage');
 
 function Zuora(options) {
     if(!(this instanceof Zuora)) {
@@ -19,6 +21,8 @@ function Zuora(options) {
     this.payment = new Payment({client: client, validation: options.validation});
     this.transaction = new Transaction({client: client, validation: options.validation});
     this.subscription = new Subscription({client: client, validation: options.validation});
+    this.hmacSignature = new HMACSignature({client: client, validation: options.validation});
+    this.usage = new Usage({client: client, validation: options.validation});
 }
 
 module.exports.create = function (opts) {
